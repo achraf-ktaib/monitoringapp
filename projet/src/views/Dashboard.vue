@@ -36,6 +36,16 @@
 		</a-col>
 	  </a-row>
   
+	  <!-- New Charts Side by Side -->
+	  <a-row :gutter="24" type="flex" align="stretch">
+		<a-col :span="24" :lg="12" class="mb-24">
+		  <harmonics-chart :data="harmonicsData" :height="400" />
+		</a-col>
+		<a-col :span="24" :lg="12" class="mb-24">
+		  <stacked-bar-chart :data="stackedData" :height="400" />
+		</a-col>
+	  </a-row>
+  
 	  <!-- Table & Alerts -->
 	  <a-row :gutter="24" type="flex" align="stretch">
 		<!-- Table for Equipment -->
@@ -57,6 +67,8 @@
   import WidgetCounter from "../components/Widgets/WidgetCounter";
   import CardProjectTable from "../components/Cards/CardProjectTable";
   import CardOrderHistory from "../components/Cards/CardOrderHistory";
+  import HarmonicsChart from "../components/Charts/HarmonicsChart";
+  import StackedBarChart from "../components/Charts/StackedBarChart";
   
   const stats = [
 	{
@@ -127,12 +139,39 @@
 	  WidgetCounter,
 	  CardProjectTable,
 	  CardOrderHistory,
+	  HarmonicsChart,
+	  StackedBarChart,
 	},
 	data() {
 	  return {
 		stats,
 		tableData,
 		tableColumns,
+		harmonicsData: {
+		  labels: ['Phase 1', 'Phase 2', 'Phase 3'],
+		  datasets: [
+			{
+			  label: "Harmoniques",
+			  backgroundColor: "#36A2EB",
+			  data: [30, 50, 70],
+			},
+		  ],
+		},
+		stackedData: {
+		  labels: ['P1', 'P2', 'P3'],
+		  datasets: [
+			{
+			  label: "Puissance",
+			  backgroundColor: "#FF6384",
+			  data: [300, 500, 400],
+			},
+			{
+			  label: "Consommation",
+			  backgroundColor: "#36A2EB",
+			  data: [200, 300, 250],
+			},
+		  ],
+		},
 	  };
 	},
   };
