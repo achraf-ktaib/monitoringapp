@@ -11,7 +11,7 @@
 		<div class="card-footer">
 			<div class="mr-30">
 				<p>Période</p>
-				<h6>Janvier 2024</h6>
+				<h6 class="period">Janvier 2024</h6>
 			</div>
 			<div class="mr-30">
 				<p>Variation</p>
@@ -47,10 +47,18 @@ export default ({
 }
 
 .total-consumption {
+	color: white; /* Définit la couleur en blanc */
 	font-size: 28px;
 	font-weight: 700;
 	margin: 25px 0;
 	letter-spacing: 1px;
+}
+
+.period {
+	color: white; /* Définit la couleur de Janvier 2024 en blanc */
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0;
 }
 
 .card-footer {

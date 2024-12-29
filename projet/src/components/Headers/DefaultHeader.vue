@@ -91,9 +91,7 @@
 			<!-- / Collapsible Navigation Menu For Small Screens -->
 
 		</div>
-		<div class="header-col header-btn">
-			<a-button href="https://www.creative-tim.com/product/muse-vue-ant-design-dashboard" target="_blank" type="primary" shape="round">Télécharger Gratuitement</a-button>
-		</div>
+
 	</a-layout-header>
 	<!-- / Layout Header ( Navbar ) -->
 
